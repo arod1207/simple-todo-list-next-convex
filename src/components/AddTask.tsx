@@ -15,7 +15,7 @@ export default function AddTask() {
   };
 
   return (
-    <div className="w-1/3 flex gap-3 m-auto py-3">
+    <div className="w-full  flex gap-3 m-auto p-6 md:w-1/3">
       <Input
         type="text"
         placeholder="Add A Task"
