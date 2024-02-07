@@ -23,7 +23,7 @@ export default function AddTask() {
         onChange={(e) => setTask(e.target.value)}
       />
       <Button type="submit" onClick={handleAddTask}>
-        Add
+        Add Task
       </Button>
     </div>
   );
