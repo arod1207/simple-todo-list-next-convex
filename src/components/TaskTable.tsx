@@ -11,17 +11,12 @@ import { FaRegTrashAlt } from "react-icons/fa";
 
 import { useMutation, useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
-import React, { useState } from "react";
-import { BlobOptions } from "buffer";
 
 export function TaskTable() {
   const tasks = useQuery(api.tasks.get);
   const status = useMutation(api.tasks.updateStatus);
   const deleteTask = useMutation(api.tasks.deleteTask);
-
-  console.log(tasks);
 
   const handleStatus = (id: any, currentState: boolean) => {
     status({ _id: id, isCompleted: !currentState });
